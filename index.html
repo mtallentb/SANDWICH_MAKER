@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Sandwich Maker</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">
+		        Sandwich Maker
+		      </a>
+		    </div>
+			<form class="navbar-form navbar-left" role="search">
+			  <div class="form-group">
+			    <input type="text" class="form-control" placeholder="Search">
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		  </div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+					<h1>Build Your Own Sandwich</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<h4>Choose Your Bread</h4>
+					<form action="" id="breadChooser">
+					  <input type="checkbox" name="bread" id="whiteBread" value="whiteBread"> White<br>
+					  <input type="checkbox" name="bread" id="wheatBread" value="wheatBread"> Wheat<br>
+					  <input type="checkbox" name="bread" id="multigrain" value="multigrain"> Mulitgrain<br>
+					  <input type="checkbox" name="bread" id="sourdough" value="sourdough"> Sourdough<br>
+					  <input type="checkbox" name="bread" id="rye" value="rye"> Rye<br><br>
+					  <button type="button" class="btn btn-success btn-sm" id="breadBtn">Add Bread</button><br>
+					</form>
+				</div>
+				<div class="col-md-2">
+					<h4>Choose Your Meat(s)</h4>
+					<form action="" id="meatChooser">
+					<!-- Think about adding a class to just the meats and have them deselect by class when you click None -->
+					  <input type="checkbox" id="ham" value="ham"> Ham<br>
+					  <input type="checkbox" id="turkey" value="turkey"> Turkey<br>
+					  <input type="checkbox" id="roastBeef" value="roastBeef"> Roast Beef<br>
+					  <input type="checkbox" id="chicken" value="chicken"> Chicken<br>
+					  <input type="checkbox" id="noMeat" value="noMeat"> None<br><br>
+					  <button type="button" class="btn btn-success btn-sm" id="meatBtn">Add Meat</button><br>
+					</form>
+				</div>
+				<div class="col-md-2">
+					<h4>Choose Your Cheese</h4>
+					<form action="" id="cheeseChooser">
+					<!-- Think about adding a class to just the veggies and have them deselect by class when you click None -->
+					  <input type="checkbox" id="cheddar" value="cheddar"> Cheddar<br>
+					  <input type="checkbox" id="swiss" value="swiss"> Swiss<br>
+					  <input type="checkbox" id="havarti" value="havarti"> Havarti<br>
+					  <input type="checkbox" id="provolone" value="provolone"> Provolone<br>
+					  <input type="checkbox" id="noCheese" value="noCheese"> None<br><br>
+					  <button type="button" class="btn btn-success btn-sm" id="cheeseBtn">Add Cheese</button><br>
+					</form>
+				</div>
+				<div class="col-md-2">
+					<h4>Choose Your Veggies</h4>
+					<form action="" id="veggieChooser">
+					<!-- Think about adding a class to just the veggies and have them deselect by class when you click None -->
+					  <input type="checkbox" id="lettuce" value="lettuce"> Lettuce<br>
+					  <input type="checkbox" id="tomatoes" value="tomatoes"> Tomatoes<br>
+					  <input type="checkbox" id="onions" value="onions"> Onions<br>
+					  <input type="checkbox" id="peppers" value="peppers"> Peppers<br>
+					  <input type="checkbox" id="noVeggies" value="noVeggies"> None<br><br>
+					  <button type="button" class="btn btn-success btn-sm" id="veggieBtn">Add Veggies</button><br>
+					</form>
+				</div>
+				<div class="col-md-2">
+					<h4>Choose Your Condiments</h4>
+					<form action="" id="sauceChooser">
+					<!-- Think about adding a class to just the veggies and have them deselect by class when you click None -->
+					  <input type="checkbox" id="mayonnaise" value="mayonnaise"> Mayonnaise<br>
+					  <input type="checkbox" id="classicMustard" value="classicMustard"> Classic Mustard<br>
+					  <input type="checkbox" id="spicyMustard" value="spicyMustard"> Spicy Mustard<br>
+					  <input type="checkbox" id="honeyMustard" value="honeyMustard"> Honey Mustard<br>
+					  <input type="checkbox" id="noSauce" value="noSauce"> None<br><br>
+					  <button type="button" class="btn btn-success btn-sm" id="sauceBtn">Add Condiments</button><br>
+					</form>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-md-2">
+					<h4>Your Bread:</h4>
+					<div id="breadTarget">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<h4>Your Meat:</h4>
+					<div id="meatTarget">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<h4>Your Cheese:</h4>
+					<div id="cheeseTarget">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<h4>Your Veggies:</h4>
+					<div id="veggieTarget">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<h4>Your Condiments:</h4>
+					<div id="sauceTarget">
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/SandwichMaker.js"></script>
+		<script type="text/javascript" src="js/bread.js"></script>
+		<script type="text/javascript" src="js/meat.js"></script>
+		<script type="text/javascript" src="js/cheese.js"></script>
+		<script type="text/javascript" src="js/veggie.js"></script>
+		<script type="text/javascript" src="js/condiments.js"></script>
+		<script type="text/javascript" src="js/DOMHandler.js"></script>
+	</body>
+</html>
